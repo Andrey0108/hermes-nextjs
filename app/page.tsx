@@ -1,13 +1,13 @@
-import Navbar from "@/app/ui/navbar";
+import Navbar from "@/app/ui/layout/navbar";
 import Link from "next/link";
 
 export default function Page() {
   return (
-    <div className="container w-screen h-screen grid grid-cols-12 mx-auto overflow-hidden">
+    <div className="container w-screen h-screen grid grid-cols-12 mx-auto">
       <Navbar />
-      <main className="col-span-12 grid grid-cols-12 row-span-10 w-full h-full">
+      <main className="col-span-12 grid grid-cols-12 grid-rows-3">
         {/* paquetes disponibles */}
-        <section className="col-span-12 h-fit p-5">
+        <section className="col-span-12 min-h-fit p-5 my-5">
           <header>
             <h2>Paquetes</h2>
           </header>
@@ -24,7 +24,7 @@ export default function Page() {
           </footer>
         </section>
         {/* preguntas */}
-        <section className="col-span-12 h-fit p-5">
+        <section className="col-span-12 min-h-fit p-5 my-5">
           <h2>Preguntas</h2>
           <hr />
           {/* crear un detail donde se hagan preguntas y respuestas de una agencia de viajes */}
@@ -72,7 +72,7 @@ export default function Page() {
           </article>
         </section>
         {/* footer */}
-        <section className="col-span-12 h-fit p-5">
+        <section className="col-span-12 min-h-fit p-5 my-5">
           <hr />
           <section className="grid grid-cols-12">
             <article className="col-span-6">
