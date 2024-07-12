@@ -5,7 +5,7 @@ import clsx from "clsx";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-export default function NavLinks( { links }: { links: Links[] }) {
+export default function NavLinks({ links }: { links: Links[] }) {
   const pathname = usePathname();
 
   return (
@@ -17,7 +17,7 @@ export default function NavLinks( { links }: { links: Links[] }) {
             key={link.name}
             href={link.href}
             className={clsx(
-              "flex w-32 rounded-md bg-gray-50 text-sm hover:bg-sky-100 hover:text-blue-600 p-2 justify-start gap-2 items-center",
+              "flex gap-2 min-w-fit rounded-md bg-gray-50 text-sm hover:bg-sky-100 hover:text-blue-600 p-2 m-2 justify-start items-center",
               {
                 "bg-sky-100 text-blue-600": pathname === link.href,
               }
