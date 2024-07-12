@@ -1,5 +1,6 @@
 import Navbar from "@/app/ui/layout/navbar";
 import Link from "next/link";
+import Package from "@/app/ui/layout/package";
 
 export default function Page() {
   return (
@@ -7,11 +8,13 @@ export default function Page() {
       <Navbar />
       <main className="col-span-12 grid grid-cols-12 grid-rows-3">
         {/* paquetes disponibles */}
-        <section className="col-span-12 min-h-fit p-5 my-5">
+        <section className="col-span-12">
           <header>
             <h2>Paquetes</h2>
           </header>
-          <article></article>
+          <article>
+            <Package />
+          </article>
           <footer>
             <p>
               Antes de realizar una reserva debes saber que el comprobante se
@@ -24,13 +27,13 @@ export default function Page() {
           </footer>
         </section>
         {/* preguntas */}
-        <section className="col-span-12 min-h-fit p-5 my-5">
+        <section className="col-span-12">
           <h2>Preguntas</h2>
           <hr />
           {/* crear un detail donde se hagan preguntas y respuestas de una agencia de viajes */}
           <article className="grid grid-cols-12">
             <details className="col-span-3 rounded-xl p-4 m-4 h-12" open>
-              <summary className="cursor-pointer list-none items-center gap-4 text-lg font-medium ">
+              <summary className="cursor-pointer list-none items-center gap-4 text-lg font-medium">
                 ¿Cómo puedo reservar un paquete?
               </summary>
               <p className="text-slate-700">
@@ -72,7 +75,7 @@ export default function Page() {
           </article>
         </section>
         {/* footer */}
-        <section className="col-span-12 min-h-fit p-5 my-5">
+        <section className="col-span-12">
           <hr />
           <section className="grid grid-cols-12">
             <article className="col-span-6">
