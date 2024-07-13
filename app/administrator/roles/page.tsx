@@ -33,7 +33,7 @@ export default function Page() {
               type="text"
               name="nombre"
               id="nombre"
-              className="col-span-12 md:col-span-6 border mt-1 rounded px-4 w-full bg-gray-50"
+              className="col-span-12 md:col-span-6 px-4 py-2 text-gray-700 bg-white border rounded-md sm:mx-2  focus:border-blue-400  focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40"
             />
           </div>
           <div className="container my-2">
