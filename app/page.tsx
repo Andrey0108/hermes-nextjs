@@ -1,19 +1,36 @@
 import Navbar from "@/app/ui/layout/navbar";
 import Link from "next/link";
 import Package from "@/app/ui/layout/package";
-
-export default function Page() {
+const packages: [] = [];
+export default async function Page() {
   return (
     <div className="container w-screen h-screen grid grid-cols-12 mx-auto">
       <Navbar />
       <main className="col-span-12 grid grid-cols-12 grid-rows-3">
-        {/* paquetes disponibles */}
         <section className="col-span-12">
           <header>
             <h2>Paquetes</h2>
           </header>
           <article>
-            <Package />
+            {packages.map(
+              (pkg: {
+                address: string;
+                name: string;
+                date: string;
+                price: number;
+                services: string[];
+              }) => {
+                return (
+                  <Package
+                    address={pkg.address}
+                    name={pkg.name}
+                    date={pkg.date}
+                    price={pkg.price}
+                    services={pkg.services}
+                  />
+                );
+              }
+            )}
           </article>
           <footer>
             <p>

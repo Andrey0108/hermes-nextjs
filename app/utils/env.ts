@@ -1,0 +1,1 @@
+export const LOCAL = "localhost:3600/api";
